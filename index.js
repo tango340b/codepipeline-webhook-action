@@ -3,7 +3,7 @@ const github = require('@actions/github');
 
 try {
   const name = core.getInput('name');
-  const region = core.getInput('region');
+  const region = core.getInput('region') || "us-east-1";
   const awsAccountId = core.getInput('aws_account_id');
   const codepipelineWebhookSecret = core.getInput('codepipeline_webhook_secret');
   const codepipelineWebhookUrl = core.getInput('codepipeline_webhook_url')
