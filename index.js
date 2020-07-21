@@ -1,5 +1,4 @@
 const core = require('@actions/core');
-const github = require('@actions/github');
 
 try {
   const name = core.getInput('name');
@@ -8,23 +7,23 @@ try {
   const codepipelineWebhookSecret = core.getInput('codepipeline_webhook_secret');
   const codepipelineWebhookUrl = core.getInput('codepipeline_webhook_url')
 
-  const repoName=process.env.GITHUB_REPOSITORY.split("/")[1]
+  const repoName = process.env.GITHUB_REPOSITORY.split("/")[1]
   const branchName = process.env.GITHUB_REF.split("/")[2]
 
   async function postData(url = '', data = {}) {
     const response = await fetch(url, {
       method: 'POST',
-      mode: 'cors', 
+      mode: 'cors',
       cache: 'no-cache',
-      credentials: 'same-origin', 
+      credentials: 'same-origin',
       headers: {
-        'x-api-key' : codepipelineWebhookSecret
+        'x-api-key': codepipelineWebhookSecret
       },
       redirect: 'follow',
-      referrerPolicy: 'no-referrer', 
-      body: JSON.stringify(data) 
+      referrerPolicy: 'no-referrer',
+      body: JSON.stringify(data)
     });
-    return response.json(); 
+    return response.json();
   }
 
 
