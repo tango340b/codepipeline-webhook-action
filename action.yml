@@ -1,14 +1,8 @@
 name: 'Codepipeline Webhook Action'
 description: 'Codepipeline Webhook Action'
 inputs:
-  name:
-    description: 'Name of the pipeline to trigger'
-    required: true
-  region:
-    description: 'AWS Region'
-    required: false
-  aws_account_id:
-    description: 'AWS Account ID'
+  deployment_environment:
+    description: 'target environment'
     required: true
   codepipeline_webhook_secret:
     description: 'API Key of the Webhook that triggers code pipeline'
