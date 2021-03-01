@@ -12,8 +12,6 @@ try {
   const branchName = process.env.GITHUB_REF.split('/').slice(2).join('-')
 
   async function postData(url = '', data = {}) {
-    console.log(data);
-    console.log("url: " + url);
     const response = await fetch(url, {
       method: 'POST',
       headers: {
@@ -44,7 +42,6 @@ try {
     })
     .catch(err => {
       console.log(err);
-      throw new Error('Failed to deploy')
     });
 
 } catch (error) {
