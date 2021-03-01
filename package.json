@@ -1,7 +1,7 @@
 {
   "name": "codepipeline-webhook-action",
   "version": "1.0.0",
-  "description": "",
+  "description": "This Github Action triggers the codepipeline webhook to deploy the application",
   "main": "index.js",
   "dependencies": {
     "@actions/core": "^1.2.4",
@@ -13,12 +13,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/medlypharmacy/codepipeline-webhook-action.git"
+    "url": "git+git@github.com:tango340b/codepipeline-webhook-action.git"
   },
-  "author": "",
+  "author": "Tango",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/medlypharmacy/codepipeline-webhook-action/issues"
+    "url": "https://github.com/tango340b/codepipeline-webhook-action/issues"
   },
-  "homepage": "https://github.com/medlypharmacy/codepipeline-webhook-action#readme"
+  "homepage": "https://github.com/tango340b/codepipeline-webhook-action#readme"
 }
