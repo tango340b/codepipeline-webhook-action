@@ -12,6 +12,7 @@ try {
   const branchName = process.env.GITHUB_REF.split('/').slice(2).join('-')
 
   async function postData(url = '', data = {}) {
+    console.log(data);
     const response = await fetch(url, {
       method: 'POST',
       headers: {
