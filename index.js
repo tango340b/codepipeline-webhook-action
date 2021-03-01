@@ -32,7 +32,7 @@ try {
       "codePipeline": {
         "name": pipelineName,
         "region": 'us-east-1',
-        "accountId": accountId
+        "accountID": accountId
       }
     }
   }
