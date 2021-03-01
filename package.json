@@ -4,7 +4,7 @@
   "description": "This Github Action triggers the codepipeline webhook to deploy the application",
   "main": "index.js",
   "dependencies": {
-    "@actions/core": "^1.2.4",
+    "@actions/core": "^1.2.6",
     "node-fetch": "^2.6.0"
   },
   "devDependencies": {},
