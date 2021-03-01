@@ -13,6 +13,7 @@ try {
 
   async function postData(url = '', data = {}) {
     console.log(data);
+    console.log("url: " + url);
     const response = await fetch(url, {
       method: 'POST',
       headers: {
@@ -41,7 +42,10 @@ try {
     .then(data => {
       console.log(data);
     })
-    .catch(err => console.log(err));
+    .catch(err => {
+      console.log(err);
+      throw new Error('Failed to deploy')
+    });
 
 } catch (error) {
   core.setFailed(error.message);
