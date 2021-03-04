@@ -13,6 +13,9 @@ inputs:
   codepipeline_name:
     description: 'Codepipeline to be triggered'
     required: true
+  build_number:
+    description: 'Build number of the application'
+    required: false
 runs:
   using: 'node12'
   main: 'index.js'

@@ -6,6 +6,7 @@ try {
   const codepipelineWebhookUrl = core.getInput('codepipeline_webhook_url')
   const accountId = core.getInput('account_id');
   const pipelineName = core.getInput('codepipeline_name');
+  const buildRevision = core.getInput('build_number');
 
   const repoName = process.env.GITHUB_REPOSITORY.split("/")[1]
   // refs/heads/feature/foo/bar -> feature-foo-bar
@@ -28,7 +29,7 @@ try {
     "APG": {
       "appName": repoName,
       "branchName": branchName,
-      "buildRevision": process.env.GITHUB_RUN_NUMBER,
+      "buildRevision": buildRevision || process.env.GITHUB_RUN_NUMBER,
       "codePipeline": {
         "name": pipelineName,
         "region": 'us-east-1',
