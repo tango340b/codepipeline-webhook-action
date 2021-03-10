@@ -42,7 +42,7 @@ try {
       console.log(data);
     })
     .catch(err => {
-      console.log(err);
+      core.setFailed(err.message);
     });
 
 } catch (error) {
